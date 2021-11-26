@@ -35,11 +35,59 @@ namespace ChatCore
         public void StartSever()
         {
             handleThread = new Thread(ClientsHandler);
+            handleThread.Start();
+
+            while (true)
+            {
+                Console.WriteLine("等待連線");
+            }
+
+
+
+
+
         }
 
         private void ClientsHandler()
         {
+            while (true)
+            {
+                lock (clients)
+                {
+                    foreach(var clientID in clients.Keys)
+                    {
+                        TcpClient client = clients[clientID];
 
+                        try
+                        {
+                            if (client.Available > 0)
+                                ReceiveMessage(clientID);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine($"Client {clientID} ,Error{e.Message}");
+                        }
+                    }
+                }
+            }
+        }
+
+        private void ReceiveMessage(string clientID)
+        {
+            TcpClient client = clients[clientID];
+            NetworkStream stream = client.GetStream();
+
+            int numBytes = client.Available;
+            byte[] buffer = new byte[numBytes];
+            int bytesRead = stream.Read(buffer, 0, numBytes);
+            string request = Encoding.Unicode.GetString(buffer).Substring(0, bytesRead/2);
+
+            if (request.StartsWith("LOGIN:", StringComparison.OrdinalIgnoreCase))
+            {
+                string[] tokens = request.Split(':');
+                string message = tokens[1];
+                Console.WriteLine($"TEXT:{message} form{clientID}");
+            }
         }
     }
 }
