@@ -1,0 +1,11 @@
+C:\M\網路資料\ChatServer\bin\Debug\netcoreapp3.1\ChatServer.exe
+C:\M\網路資料\ChatServer\bin\Debug\netcoreapp3.1\ChatServer.deps.json
+C:\M\網路資料\ChatServer\bin\Debug\netcoreapp3.1\ChatServer.runtimeconfig.json
+C:\M\網路資料\ChatServer\bin\Debug\netcoreapp3.1\ChatServer.runtimeconfig.dev.json
+C:\M\網路資料\ChatServer\bin\Debug\netcoreapp3.1\ChatServer.dll
+C:\M\網路資料\ChatServer\bin\Debug\netcoreapp3.1\ChatServer.pdb
+C:\M\網路資料\ChatServer\obj\Debug\netcoreapp3.1\ChatServer.csprojAssemblyReference.cache
+C:\M\網路資料\ChatServer\obj\Debug\netcoreapp3.1\ChatServer.AssemblyInfoInputs.cache
+C:\M\網路資料\ChatServer\obj\Debug\netcoreapp3.1\ChatServer.AssemblyInfo.cs
+C:\M\網路資料\ChatServer\obj\Debug\netcoreapp3.1\ChatServer.dll
+C:\M\網路資料\ChatServer\obj\Debug\netcoreapp3.1\ChatServer.pdb
