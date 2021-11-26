@@ -16,7 +16,7 @@ namespace ChatCore
 
         }
 
-        public bool Connect(string address,int port)
+        public bool Connect(string address, int port)
         {
             client = new TcpClient();
 
@@ -39,7 +39,7 @@ namespace ChatCore
                 return false;
             }
         }
-        
+
         public void Disconnect()
         {
             client.Close();
@@ -48,9 +48,20 @@ namespace ChatCore
 
         public void SendData(string message)
         {
-            byte[] requestBuffer = Encoding.ASCII.GetBytes(message);
+            byte[] requestBuffer = Encoding.Unicode.GetBytes(message);
             client.GetStream().Write(requestBuffer, 0, requestBuffer.Length);
         }
 
+        public void SetName(string name)
+        {
+            string data = "LOGIN:" + name;
+            SendData(data);
+        }
+
+        public void SendMessage(string message)
+        {
+            string data = "MESSAGE:" + message;
+            SendData(data);
+        }
     }
 }

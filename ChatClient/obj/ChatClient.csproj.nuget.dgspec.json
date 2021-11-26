@@ -31,7 +31,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\M\\網路資料\\ChatCore\\ChatCore.csproj": {
+                "projectPath": "C:\\M\\網路資料\\ChatCore\\ChatCore.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -59,6 +63,17 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.120\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\M\\網路資料\\ChatCore\\ChatCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\M\\網路資料\\ChatCore\\ChatCore.csproj",
+        "projectName": "ChatCore",
+        "projectPath": "C:\\M\\網路資料\\ChatCore\\ChatCore.csproj"
+      },
+      "frameworks": {
+        "net452": {}
       }
     }
   }
