@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ChatCore
 {
-    class ChatServer
+    public class ChatServer
     {
         private int port;
         private TcpListener listener;
