@@ -77,6 +77,13 @@ namespace ChatCore
             }
         }
 
+        private void RemoveClient(string clientID)
+        {
+            Console.WriteLine($"客戶{clientID}");
+            TcpClient client = clients[clientID];
+
+        }
+
         private void ReceiveMessage(string clientID)
         {
             TcpClient client = clients[clientID];
