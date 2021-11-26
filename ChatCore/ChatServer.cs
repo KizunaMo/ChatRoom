@@ -40,12 +40,17 @@ namespace ChatCore
             while (true)
             {
                 Console.WriteLine("等待連線");
+                TcpClient client = listener.AcceptTcpClient();
+
+                string clientID = client.Client.RemoteEndPoint.ToString();
+                Console.WriteLine($"客戶端{clientID}已連線");
+
+                lock (clients)
+                {
+                    clients.Add(clientID, client);
+                    userNames.Add(clientID, "Unknown");
+                }
             }
-
-
-
-
-
         }
 
         private void ClientsHandler()
@@ -85,6 +90,13 @@ namespace ChatCore
             if (request.StartsWith("LOGIN:", StringComparison.OrdinalIgnoreCase))
             {
                 string[] tokens = request.Split(':');
+                userNames[clientID] = tokens[0];
+                Console.WriteLine($"Client{userNames[clientID]} 登入  從{clientID}");
+            }
+
+            if (request.StartsWith("MESSAGE:", StringComparison.OrdinalIgnoreCase))
+            {
+                String[] tokens = request.Split(':');
                 string message = tokens[1];
                 Console.WriteLine($"TEXT:{message} form{clientID}");
             }
