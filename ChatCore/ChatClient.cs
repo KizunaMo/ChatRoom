@@ -46,15 +46,9 @@ namespace ChatCore
             Console.WriteLine($"已中斷連線");
         }
 
-        public void SendData(string message)
+        public void SetName(string name, string password)
         {
-            byte[] requestBuffer = Encoding.Unicode.GetBytes(message);
-            client.GetStream().Write(requestBuffer, 0, requestBuffer.Length);
-        }
-
-        public void SetName(string name)
-        {
-            string data = "LOGIN:" + name;
+            string data = "LOGIN:" + name + ":" + password;
             SendData(data);
         }
 
@@ -62,6 +56,48 @@ namespace ChatCore
         {
             string data = "MESSAGE:" + message;
             SendData(data);
+        }
+
+        public void SendData(string message)
+        {
+            byte[] requestBuffer = Encoding.Unicode.GetBytes(message);
+            client.GetStream().Write(requestBuffer, 0, requestBuffer.Length);
+        }
+
+        public void Refresh()
+        {
+            if (client.Available > 0)
+                HandleReceivedMessage(client);
+        }
+
+        private void HandleReceivedMessage(TcpClient client)
+        {
+            NetworkStream steam = client.GetStream();
+
+            int numBytes = client.Available;
+            byte[] buffer = new byte[numBytes];
+            int bytesRead = steam.Read(buffer, 0, numBytes);
+            string request = System.Text.Encoding.Unicode.GetString(buffer).Substring(0, bytesRead);
+
+            if (request.StartsWith("LOGIN:1", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("登入成功");
+                return;
+            }
+
+            if (request.StartsWith("LOGIN:0", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("登入失敗");
+                return;
+            }
+
+            if (request.StartsWith("MESSAGE:", StringComparison.OrdinalIgnoreCase))
+            {
+                string[] tokens = request.Split(':');
+                string sender = tokens[1];
+                string message = tokens[2];
+                Console.WriteLine($"{sender}:{message}");
+            }
         }
     }
 }

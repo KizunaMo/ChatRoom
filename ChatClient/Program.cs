@@ -14,17 +14,26 @@ namespace ChatClient
             Console.WriteLine($"<請輸入名字>");
             string name = Console.ReadLine();
 
+            Console.WriteLine("請輸入密碼");
+            string password = Console.ReadLine();
+
             string IP = "127.0.0.1";
             int port = 4099;
             bool succeed = client.Connect(IP, port);
             if (!succeed)
                 return;
 
-            client.SetName(name);
+            client.SetName(name,password);
             Console.WriteLine($"你現在可以輸入任何訊息......");
 
             while (true)
             {
+                while(Console.KeyAvailable == false)
+                {
+                    client.Refresh();
+                }
+
+
                 string message = Console.ReadLine();
 
                 if (message == "exit")

@@ -47,14 +47,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ChatClient\ChatClient.csproj">
-      <Project>{92c7eb83-2739-424f-af4d-cc30836e212c}</Project>
-      <Name>ChatClient</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChatServer\ChatServer.csproj">
-      <Project>{84ae1d46-c614-4445-ac84-1e5d45db1154}</Project>
-      <Name>ChatServer</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

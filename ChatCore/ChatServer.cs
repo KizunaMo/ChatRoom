@@ -17,10 +17,12 @@ namespace ChatCore
 
         private readonly Dictionary<string, TcpClient> clients = new Dictionary<string, TcpClient>();
         private readonly Dictionary<string, string> userNames = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> accounts = new Dictionary<string, string>();
 
         public ChatServer()
         {
-
+            accounts.Add("arthur", "1111");//建立測試用
+            accounts.Add("jojo", "1111");//建立測試用
         }
 
         public void Bind(int port)
@@ -48,7 +50,6 @@ namespace ChatCore
                 lock (clients)
                 {
                     clients.Add(clientID, client);
-                    userNames.Add(clientID, "Unknown");
                 }
             }
         }
@@ -77,11 +78,10 @@ namespace ChatCore
             }
         }
 
-        private void RemoveClient(string clientID)
+        private void SendData(TcpClient client,string data)
         {
-            Console.WriteLine($"客戶{clientID}");
-            TcpClient client = clients[clientID];
-
+            byte[] requestBuffer = System.Text.Encoding.Unicode.GetBytes(data);
+            client.GetStream().Write(requestBuffer, 0, requestBuffer.Length);
         }
 
         private void ReceiveMessage(string clientID)
@@ -97,15 +97,43 @@ namespace ChatCore
             if (request.StartsWith("LOGIN:", StringComparison.OrdinalIgnoreCase))
             {
                 string[] tokens = request.Split(':');
-                userNames[clientID] = tokens[0];
-                Console.WriteLine($"Client{userNames[clientID]} 登入  從{clientID}");
+                if(tokens.Length != 3)
+                {
+                    Console.WriteLine($"客戶{clientID} 登入失敗");
+                    SendData(client, "LOGIN:0");
+                    return;
+                }
+
+                string username = tokens[1];
+                string password = tokens[2];
+
+                if(accounts[username] != password)
+                {
+                    Console.WriteLine($"客戶{clientID},{username} 登入失敗 / 密碼錯誤");
+                    SendData(client, "LOGIN:0");
+                    return;
+                }
+
+                userNames[clientID] = username;
+                Console.WriteLine($"Client{clientID} 登入  從{username}");
+
+                SendData(client, "LOGIN:1");
+                return;
             }
 
             if (request.StartsWith("MESSAGE:", StringComparison.OrdinalIgnoreCase))
             {
                 String[] tokens = request.Split(':');
                 string message = tokens[1];
-                Console.WriteLine($"TEXT:{message} form{clientID}");
+
+                if (!userNames.ContainsKey(clientID))
+                {
+                    Console.WriteLine($"TEXT:{message} from 未知對象");
+                }
+                else
+                {
+                    Console.WriteLine($"TEXT:{message} form{clientID}");
+                }
             }
         }
     }
