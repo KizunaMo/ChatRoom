@@ -10,6 +10,7 @@ namespace ChatCore
     public class ChatClient
     {
         private TcpClient client;
+        private List<KeyValuePair<string, string>> messageList;
 
         public ChatClient()
         {
@@ -69,6 +70,13 @@ namespace ChatCore
             if (client.Available > 0)
                 HandleReceivedMessage(client);
         }
+        public List<KeyValuePair<string, string>> GetMessages()
+        {
+            var messages = new List<KeyValuePair<string, string>>(m_messageList);
+            messageList.Clear();
+
+            return messages;
+        }
 
         private void HandleReceivedMessage(TcpClient client)
         {
@@ -97,6 +105,7 @@ namespace ChatCore
                 string sender = tokens[1];
                 string message = tokens[2];
                 Console.WriteLine($"{sender}:{message}");
+                messageList.Add(new KeyValuePair<string, string>(sender, message));
             }
         }
     }
