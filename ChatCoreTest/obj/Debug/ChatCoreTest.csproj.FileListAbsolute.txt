@@ -1,0 +1,6 @@
+D:\資策會\Unity\網路資料庫\Example\chat-room-session03\ChatCoreTest\bin\Debug\ChatCoreTest.exe
+D:\資策會\Unity\網路資料庫\Example\chat-room-session03\ChatCoreTest\bin\Debug\ChatCoreTest.pdb
+D:\資策會\Unity\網路資料庫\Example\chat-room-session03\ChatCoreTest\obj\Debug\ChatCoreTest.csproj.AssemblyReference.cache
+D:\資策會\Unity\網路資料庫\Example\chat-room-session03\ChatCoreTest\obj\Debug\ChatCoreTest.csproj.CoreCompileInputs.cache
+D:\資策會\Unity\網路資料庫\Example\chat-room-session03\ChatCoreTest\obj\Debug\ChatCoreTest.exe
+D:\資策會\Unity\網路資料庫\Example\chat-room-session03\ChatCoreTest\obj\Debug\ChatCoreTest.pdb
