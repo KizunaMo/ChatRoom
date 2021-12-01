@@ -94,7 +94,9 @@ namespace ChatCoreTest
             Console.WriteLine($"封包大小為{m_Pos}，封包前四個bytes為紀錄實際數據總長度:{getLengh}");
             for (int i = 0; i < m_Pos; i++)
             {
-                Console.Write($"{byteData[i]},");
+                int bytesRead = (int)m_Pos;
+                string request = Encoding.Unicode.GetString(byteData).Substring(0, bytesRead / 2);
+                Console.Write($"{request},");
             }
         }
 
