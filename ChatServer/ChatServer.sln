@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatClient", "..\ChatClient
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatCore", "..\ChatCore\ChatCore.csproj", "{3551C6F6-5CC3-4F00-98AB-15C9AE1A7880}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatCoreTest", "..\..\..\資策會\Unity\網路資料庫\Example\chat-room-session03\ChatCoreTest\ChatCoreTest.csproj", "{323062E9-DA2A-4297-8B16-922F22B64DA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatCoreTest", "..\ChatCoreTest\ChatCoreTest.csproj", "{323062E9-DA2A-4297-8B16-922F22B64DA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

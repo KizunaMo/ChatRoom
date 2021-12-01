@@ -4,9 +4,3 @@ D:\資策會\Unity\網路資料庫\Example\chat-room-session03\ChatCoreTest\obj\
 D:\資策會\Unity\網路資料庫\Example\chat-room-session03\ChatCoreTest\obj\Debug\ChatCoreTest.csproj.CoreCompileInputs.cache
 D:\資策會\Unity\網路資料庫\Example\chat-room-session03\ChatCoreTest\obj\Debug\ChatCoreTest.exe
 D:\資策會\Unity\網路資料庫\Example\chat-room-session03\ChatCoreTest\obj\Debug\ChatCoreTest.pdb
-D:\CSharpPractice\ChatRoom\ChatCoreTest\bin\Debug\ChatCoreTest.exe
-D:\CSharpPractice\ChatRoom\ChatCoreTest\bin\Debug\ChatCoreTest.pdb
-D:\CSharpPractice\ChatRoom\ChatCoreTest\obj\Debug\ChatCoreTest.csproj.AssemblyReference.cache
-D:\CSharpPractice\ChatRoom\ChatCoreTest\obj\Debug\ChatCoreTest.csproj.CoreCompileInputs.cache
-D:\CSharpPractice\ChatRoom\ChatCoreTest\obj\Debug\ChatCoreTest.exe
-D:\CSharpPractice\ChatRoom\ChatCoreTest\obj\Debug\ChatCoreTest.pdb
