@@ -1,0 +1,6 @@
+D:\CSharpPractice\ChatRoom\ChatCore\bin\Debug\ChatCore.dll
+D:\CSharpPractice\ChatRoom\ChatCore\bin\Debug\ChatCore.pdb
+D:\CSharpPractice\ChatRoom\ChatCore\obj\Debug\ChatCore.csproj.AssemblyReference.cache
+D:\CSharpPractice\ChatRoom\ChatCore\obj\Debug\ChatCore.csproj.CoreCompileInputs.cache
+D:\CSharpPractice\ChatRoom\ChatCore\obj\Debug\ChatCore.dll
+D:\CSharpPractice\ChatRoom\ChatCore\obj\Debug\ChatCore.pdb

@@ -26,25 +26,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Student\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\M\\網路資料\\ChatServer\\ChatServer.csproj",
+      "projectUniqueName": "D:\\CSharpPractice\\ChatRoom\\ChatServer\\ChatServer.csproj",
       "projectName": "ChatServer",
-      "projectPath": "C:\\M\\網路資料\\ChatServer\\ChatServer.csproj",
-      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-      "outputPath": "C:\\M\\網路資料\\ChatServer\\obj\\",
+      "projectPath": "D:\\CSharpPractice\\ChatRoom\\ChatServer\\ChatServer.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\CSharpPractice\\ChatRoom\\ChatServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -57,9 +58,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\M\\網路資料\\ChatCore\\ChatCore.csproj": {
-              "projectPath": "C:\\M\\網路資料\\ChatCore\\ChatCore.csproj"
+            "D:\\CSharpPractice\\ChatRoom\\ChatCore\\ChatCore.csproj": {
+              "projectPath": "D:\\CSharpPractice\\ChatRoom\\ChatCore\\ChatCore.csproj"
             }
           }
         }
@@ -72,6 +74,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -87,7 +90,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.120\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

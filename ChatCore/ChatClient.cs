@@ -72,7 +72,7 @@ namespace ChatCore
         }
         public List<KeyValuePair<string, string>> GetMessages()
         {
-            var messages = new List<KeyValuePair<string, string>>(m_messageList);
+            var messages = new List<KeyValuePair<string, string>>(messageList);
             messageList.Clear();
 
             return messages;
