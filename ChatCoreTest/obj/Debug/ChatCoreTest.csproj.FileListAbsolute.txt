@@ -10,3 +10,8 @@ D:\CSharpPractice\ChatRoom\ChatCoreTest\obj\Debug\ChatCoreTest.csproj.AssemblyRe
 D:\CSharpPractice\ChatRoom\ChatCoreTest\obj\Debug\ChatCoreTest.csproj.CoreCompileInputs.cache
 D:\CSharpPractice\ChatRoom\ChatCoreTest\obj\Debug\ChatCoreTest.exe
 D:\CSharpPractice\ChatRoom\ChatCoreTest\obj\Debug\ChatCoreTest.pdb
+C:\M\網路資料\ChatCoreTest\bin\Debug\ChatCoreTest.exe
+C:\M\網路資料\ChatCoreTest\bin\Debug\ChatCoreTest.pdb
+C:\M\網路資料\ChatCoreTest\obj\Debug\ChatCoreTest.csprojAssemblyReference.cache
+C:\M\網路資料\ChatCoreTest\obj\Debug\ChatCoreTest.exe
+C:\M\網路資料\ChatCoreTest\obj\Debug\ChatCoreTest.pdb
