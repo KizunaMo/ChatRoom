@@ -29,6 +29,7 @@ namespace ChatCoreTest
             Write("Hello!");
             Write("Hello!");
             Write("WOOOOW!");
+            Write("中文!");
             Write(333.33f);
             Write(999);
 
@@ -91,7 +92,6 @@ namespace ChatCoreTest
             {
                 Array.Reverse(byteData);
             }
-
             byteData.CopyTo(m_PacketData, m_Pos);
             m_Pos += (uint)byteData.Length;
         }
@@ -127,11 +127,7 @@ namespace ChatCoreTest
                     {
                         Array.Reverse(tmpBytes);
                     }
-
                     request = BitConverter.ToInt32(tmpBytes, 0).ToString();
-
-
-
                     Console.Write($"{request}\n");
                     if (BitConverter.IsLittleEndian)
                     {
@@ -148,9 +144,7 @@ namespace ChatCoreTest
                     {
                         Array.Reverse(tmpBytes);
                     }
-
                     request = BitConverter.ToSingle(tmpBytes, 0).ToString();
-
                     Console.Write($"{request}\n");
                     if (BitConverter.IsLittleEndian)
                     {
@@ -174,9 +168,7 @@ namespace ChatCoreTest
                     {
                         Array.Reverse(tmpBytes);
                     }
-
                     request = Encoding.Unicode.GetString(tmpBytes, 0, tmpLengh);
-
                     Console.Write($"{request}\n");
                     if (BitConverter.IsLittleEndian)
                     {
@@ -184,9 +176,7 @@ namespace ChatCoreTest
                     }
                     m_Pos += (uint)tmpLengh-4;
                 }
-
             }
         }
-
     }
 }
